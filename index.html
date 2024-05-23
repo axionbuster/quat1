@@ -4,8 +4,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quaternion Calculator</title>
 <h1>Quaternion Calculator</h1>
-<script type="module" src="/jquery.js"></script>
-<script src="/main.js"></script>
 <table>
     <tbody>
         <tr>
@@ -52,11 +50,12 @@ Select:
         <td> <b>k</b></td>
     </tr>
 </table>
-<script>
-    document.querySelector('#multiplypq')
-        .addEventListener('click', mulpq);
-    document.querySelector('#multiplyqp')
-        .addEventListener('click', mulqp);
+<script type="module">
+    import jQuery from 'jquery'
+    Object.assign(window, { $: jQuery, jQuery })
+    import { mulpq, mulqp } from './main.js'
+    $('#multiplypq').on('click', mulpq)
+    $('#multiplyqp').on('click', mulqp);
 </script>
 
 </html>
