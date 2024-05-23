@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quaternion Calculator</title>
+<h1>Quaternion Calculator</h1>
+<script type="module" src="/jquery.js"></script>
+<script src="/main.js"></script>
+<table>
+    <tbody>
+        <tr>
+            <th>p = </th>
+            <td><input id="p0"></td>
+            <td>+</td>
+            <td><input id="p1"></td>
+            <td> <b>i</b> + </td>
+            <td><input id="p2"></td>
+            <td> <b>j</b> + </td>
+            <td><input id="p3"></td>
+            <td> <b>k</b></td>
+        </tr>
+        <tr>
+            <th>q = </th>
+            <td><input id="q0"></td>
+            <td>+</td>
+            <td><input id="q1"></td>
+            <td> <b>i</b> + </td>
+            <td><input id="q2"></td>
+            <td> <b>j</b> + </td>
+            <td><input id="q3"></td>
+            <td> <b>k</b></td>
+        </tr>
+    </tbody>
+</table>
+Select:
+<div style="display: inline">
+    <button id="multiplypq">Multiply (<b>p &times; q</b>)</button>
+    <button id="multiplyqp">Multiply (<b>q &times; p</b>)</button>
+</div>
+<p>
+    Answer:
+</p>
+<table>
+    <tr>
+        <td><input id="a0"></td>
+        <td>+</td>
+        <td><input id="a1"></td>
+        <td> <b>i</b> + </td>
+        <td><input id="a2"></td>
+        <td> <b>j</b> + </td>
+        <td><input id="a3"></td>
+        <td> <b>k</b></td>
+    </tr>
+</table>
+<script>
+    document.querySelector('#multiplypq')
+        .addEventListener('click', mulpq);
+    document.querySelector('#multiplyqp')
+        .addEventListener('click', mulqp);
+</script>
+
+</html>
